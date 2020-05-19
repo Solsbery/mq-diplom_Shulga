@@ -38,6 +38,8 @@ body {
 	background-repeat: no-repeat;
 	background-position: center center;
 	position: relative;
+
+	padding: 30px 0 70px;
 }
 .main-header::after {
   	content: "";
@@ -48,6 +50,12 @@ body {
   	left: 0;
   	opacity: 0.9;
  	position: absolute;
+}
+.container {
+	width: 100vw;
+	overflow: hidden;
+	/*margin-left: auto;
+	margin-right: auto;*/
 }
 .content-container {
 	box-sizing: border-box;
@@ -61,16 +69,17 @@ body {
   	position: relative;
   	z-index: 1;
  }
-.logo-text {
+.logo-text-container {
 	width: 135px;
-	padding: 3.75em 0;
-	margin: auto;
-	fill: #ffffff;	
+	margin: auto;	
 }
-h1 {
+.logo-text {
+	fill: #ffffff;
+}
+.h1 {
 	display: flex;
 	flex-direction: column;
-	margin-top: 100px;
+	margin-top: 130px;
 
 	font-size: 28px;
 	letter-spacing: 1px;
@@ -79,46 +88,38 @@ h1 {
 	text-transform: uppercase;
 }
 .welcome {
-	margin-top: 20px;
-}
-.welcome.text {
 	margin-left: 44px;
+	margin-top: 15px;
 }
 .buttons {
-	margin-left: auto;
-	margin-right: auto;
-	padding: 10.5em 0 10.25em;
+	margin: 85px auto 0;
 }
 .button-container {
-	height: 4.375em;
-	box-sizing: border-box;
 	display: flex;
 	align-items: center;
-
+	height: 36px;
+	box-sizing: border-box;
 	text-align: left;
-	padding: 0.625em 0 0.625em 10.25em;
+	padding:5px 0 5px 82px;
 	background-color: #5e42b0;
 	border-radius: 50px;
-	margin-bottom: 1.75em;
-}
-.button-container:last-child {
-	margin-bottom: 0;
+	margin-bottom: 14px;
 }
 .icon {
-	width: 3.125em;
-	height: 3.125em;
+	width: 25px;
+	height: 25px;
 	fill: #ffffff;
 }
 .icon.apple {
-	margin-bottom: 0.5em;
+	margin-bottom: 4px;
 }
 .app-button {
-	margin-left: 0.625em;
+	margin-left: 5px;
 }
 .button-text {
 	display: block;
 
-	line-height: 1.25em;
+	line-height: 11px;
 	color: #ffffff;
 	text-transform: uppercase;
 }
@@ -127,55 +128,51 @@ h1 {
 .athlets-section, .players-section {
 	position: relative;
 	min-height: 947px;
+	padding-top: 13px;
 }
 
-h2 {
-	padding: 0.2em 0;
-	margin-bottom: 4.72em;
+.h2 {
+	padding-bottom: 10px;
+	margin-bottom: 236px;
 
-	font-size: 6.25rem;
-	line-height: 1.2em;
+	font-size: 50px;
+	line-height: 60px;
 	color: #e7e7e7;
 	font-weight: 700;
 	text-transform: uppercase;
 }
 .img-container {
-	height: 282px;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center center;
 	position: absolute;
-	top: 8em;
+	top: 80px;
 	z-index: 1;
 }
 
 .img-container.athlets {
-	background-image: url("../images/footballer_192.png");
 	right: 20%;
 	left: 20%;
 }
 .img-container.players {
-	background-image: url("../images/basketballer_302.png");
 	right: 3%;
 	left: 3%;
 }
-article:nth-of-type(3n+1) {
+.article:nth-of-type(3n+1) {
 	background-color: #fafafa;
 }
-article:nth-of-type(3n+2) {
+.article:nth-of-type(3n+2) {
 	background-color: #f5f4f9;
 }
-article:nth-of-type(3n+3) {
+.article:nth-of-type(3n+3) {
 	background-color: #5e42b0;
 }
-.players-section article:nth-of-type(3n+3) {
+.players-section .article:nth-of-type(3n+3) {
 	background-color: #090c35;
+}
+.article {
+	padding: 55px 0;
 }
 .article-header {
 	display: flex;
 	align-items: center;
-
-	padding: 55px 20px 0;
 }
 .number-container {
 	width: 17px;
@@ -204,7 +201,7 @@ article:nth-of-type(3n+3) {
 .article-number.dark_background {
 	color: #8765dd;
 }
-h3 {
+.h3 {
 	font-size: 23px;
 	letter-spacing: 1px;
 	line-height: 34px;
@@ -217,37 +214,28 @@ h3 {
 	letter-spacing: 1px;
 	line-height: 18px;
 	color: #000000;
-
-	padding-top: 20px;
-	padding-bottom: 50px
+	margin-top: 20px;
 }
 .dark_background .article-text {
 	color: #ffffff;
 }
 
-article.aside-article {
+.article.aside-article {
 	background-color: transparent;
 }
-.img-aside {
-	min-height: 350px;
-	background-size: cover;
-	background-position: center top;
-	background-repeat: no-repeat;
-}
-.img-aside.first {
-	background-image: url("../images/be-active_640.jpg");
-}
-.img-aside.second {
-	background-image: url("../images/find-contact_640.jpg");
-}
-.img-aside.third {
-	background-image: url("../images/work-it_640.jpg");
+.img-aside img {
+	object-fit: cover;
+	width: 100vw;
+	max-height: 350px;
 }
 .aside-article {
 	position: relative;
+	padding-top: 0;
 }
-h4 {
+.aside-article .content-container {
 	padding-top: 30px;
+}
+.h4 {
 	font-size: 28px;
 	letter-spacing: 1px;
 	line-height: 34px;
@@ -301,12 +289,13 @@ h4 {
 	position: relative;
 	z-index: 1;
 	padding-top: 100px;
+	padding-bottom: 9px;
 }
 .logo-container {
 	box-sizing: border-box;
 	width: 75px;
 	height: 75px;
-	margin: 0 auto 55px;
+	margin: 0 auto 50px;
 	padding-top: 10px;
 	border-radius: 15px;
 	fill: #ffffff;
@@ -317,7 +306,7 @@ h4 {
 .logo {
 	width: 60px;
 }
-h5 {
+.h5 {
 	font-size: 32px;
 	letter-spacing: 1px;
 	font-weight: 700;
@@ -336,51 +325,46 @@ h5 {
 	padding-left: 5px;
 	padding-right: 5px;
 }
-footer .buttons {
-	padding: 72px 0 48px;
+.footer .buttons {
+	margin: 75px auto 80px;
 }
 
 
 @media (min-width: 641px) and (max-width: 960px) {
 	.main-header {
 		background-image: url("../images/football_1280.jpg");
-	}
-	.container {
-		min-width: 641px;
-		max-width: 960px;
-		margin-left: auto;
-		margin-right: auto;
+		padding: 38px 0 90px;
 	}
 	.content-container {
 		width: 100%;
-		padding-left: 3.2%;
-		padding-right: 3.2%;
+		padding-left: 3.125%;
+		padding-right: 3.125%;
 	}
-	.logo-text {
+	.logo-text-container {
 		width: 206px;
-		padding: 38px 0;
 	}
-	h1 {
-		margin-top: 142px;
+	.h1 {
+		margin-top: 180px;
 		padding-left: 56px;
 		font-size: 64px;
 		letter-spacing: 3px;
-	}
-	.welcome.text {
-		margin-left: 106px;
 		line-height: 78px;
 	}
+	.welcome {
+		margin-left: 106px;
+	}
 	.buttons {
-		padding: 300px 0 90px;
+		margin-top: 300px;
 	}
 	.buttons .list {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-evenly;
 	}
 	.button-container {
 		height: 78px;
-		width: 45%;
+		min-width: 312px;
 	 	padding: 15px 40px;
+	 	margin-bottom: 0;
 	}
 	.icon {
 		width: 47px;
@@ -405,40 +389,31 @@ footer .buttons {
 
 	.athlets-section, .players-section {
 		min-height: 0;
+		padding-top: 80px;
 	}
-	h2 {
-		padding: 80px 0 10px;
+	.h2 {
+		padding-bottom: 10px;
 		font-size: 80px;
 		margin-bottom: 0;
 	}
 	.img-container.athlets {
-		height: 700px;
-		background-position: left top;
-		top: 84px;
+		top: 92px;
 		left: -160px;
 	}
 	.img-container.players {
-		height: 700px;
-		background-position: right top;
-		top: 24px;
+		top: 44px;
 		right: 0;
-		left: 298px;
-	}
-	.img-container.athlets {
-		background-image: url("../images/footballer_497.png");
-	}
-	.img-container.players {
-		background-image: url("../images/basketballer_436.png");
+		left: auto;
 	}
 	.athlets .content-container, .athlets-section .content-container {
-		width: 63%;
+		width: 64%;
 		margin-right: 0;
 	}
 	.players .content-container, .players-section .content-container {
-		width: 63%;
+		width: 64%;
 		margin-left: 0;
 	}
-	article:nth-of-type(3n+1) {
+	.article:nth-of-type(3n+1) {
 		background-color: #ffffff;
 	}
 	.number-container {
@@ -456,35 +431,29 @@ footer .buttons {
 	.aside-article {
 		padding-bottom: 10%;
 	}
-	.img-aside {
-		margin-bottom: 8%;
+	.img-aside img {
+		max-height: 585px;
 	}
-	h4 {
+	.aside-article .content-container {
+		padding-top: 85px;
+	}
+	.h4 {
 		font-size: 80px;
 		line-height: 60px;
 	}
 	.aside-article .article-text {
 		font-size: 24px;
 		line-height: 28px;
-		padding-top: 35px;
+		margin-top: 35px;
 	}
 	.img-aside {
 		min-height: 584px;
-	}
-	.img-aside.first {
-		background-image: url("../images/be-active_960.jpg");
-	}
-	.img-aside.second {
-		background-image: url("../images/find-contact_960.jpg");
-	}
-	.img-aside.third {
-		background-image: url("../images/work-it_960.jpg");
 	}
 	.aside-article .number-container {
 		width: 116px;
 		height: 116px;
 		padding-top: 40px;
-		top: 494px;
+		top: 504px;
 	}
 	.aside-article .article-number {
 		font-size: 24px;
@@ -500,6 +469,7 @@ footer .buttons {
 	}
 	.footer .content-container {
 		padding-top: 124px;
+		padding-bottom: 22px;
 	}
 	.logo-container {
 		width: 130px;
@@ -511,22 +481,24 @@ footer .buttons {
 	.logo {
 		width: 100px;
 	}
-	h5 {
+	.h5 {
 		font-size: 80px;
 		letter-spacing: 2px;
 		line-height: 60px;
-		margin-bottom: 200px;
+	}
+	.footer-title {
+		text-align-last: center;
 	}
 	.footer-title.text {
 		font-size: 36px;
 		line-height: 60px;
 		color: #a496ca;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding: 0 20px;
+		margin-top: 15px;
 		text-align-last: center;
 	}
 	.footer .buttons {
-		padding: 72px 0 30px;
+		margin: 275px auto 52px;
 	}
 	.footer .logo-text {
 		padding: 22px 0;
@@ -534,15 +506,14 @@ footer .buttons {
 }
 
 
-@media (min-width: 961px) and (max-width: 1920px) {
+@media (min-width: 961px) and (max-width: 1920px), (min-width: 1920px) {
 	.main-header {
 		background-image: url("../images/football_1920.jpg");
+		padding: 42px 0 110px;
 	}
 	.container {
-		min-width: 961px;
-		max-width: 1920px;
-		margin-left: auto;
-		margin-right: auto;
+		/*width: 100vw;*/
+		/*max-width: 1920px;*/
 	}
 	.content-container {
 		width: 100%;
@@ -550,25 +521,21 @@ footer .buttons {
 		padding-left: 1%;
 		padding-right: 1%;
 	}
-	.logo-text {
+	.logo-text-container {
 		width: 194px;
-		padding: 44px 0;
 	}
-	h1 {
-		margin-top: 246px;
+	.h1 {
+		margin-top: 280px;
 		padding-left: 0;
 		font-size: 90px;
 		letter-spacing: 5px;
 		line-height: 100px;
 	}
 	.welcome {
-		margin-top: 0;
-	}
-	.welcome.text {
 		margin-left: auto;
 	}
 	.buttons {
-		padding: 220px 0 110px;
+		margin-top: 220px;
 	}
 	.buttons .list {
 		display: flex;
@@ -600,34 +567,25 @@ footer .buttons {
 		font-weight: 700;
 	}
 
-
 	.athlets-section, .players-section {
 		min-height: 0;
+		padding-top: 115px;
 	}
-	h2 {
-		padding: 115px 0 53px;
+	.h2 {
+		padding-bottom: 53px;
 		font-size: 80px;
 		margin-bottom: 0;
 	}
 	.img-container.athlets {
-		min-height: 910px;
-		background-position: left top;
-		top: 28px;
-		left: 13.6%;
+		top: 3.15%;
+		bottom: -5.63%;
+		left: auto;
 		right: 50%;
 	}
 	.img-container.players {
-		height: 815px;
-		background-position: right top;
 		top: 22px;
-		right: 6.4%;
-		left: 42%;
-	}
-	.img-container.athlets {
-		background-image: url("../images/footballer_566.png");
-	}
-	.img-container.players {
-		background-image: url("../images/basketballer_991.png");
+		right: auto;
+		left: 40%;
 	}
 	.athlets-section .content-container {
 		width: 42%;
@@ -637,18 +595,16 @@ footer .buttons {
 		width: 42%;
 		margin-left: 8%;
 	}
-	article:nth-of-type(3n+1) {
+	.article:nth-of-type(3n+1) {
 		background-color: #ffffff;
 	}
-	h3 {
+	.h3 {
 		font-size: 36px;
 		letter-spacing: 2px;
 	}
 	.article-text {
 		font-size: 20px;
 		line-height: 28px;
-		padding-top: 28px;
-		padding-bottom: 54px
 	}
 	.number-container {
 		width: 22px;
@@ -668,35 +624,27 @@ footer .buttons {
 		display: flex;
 	}
 	.aside-article .content-container {
-		width: 35%;
-		margin-left: 7.3%;
+		width: 50vw;
+		padding: 0 7.5% 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
-	.img-aside {
-		margin-bottom: 0;
-		width: 50%;
+	.img-aside img {
+		width: 50vw;
 		max-height: 730px;
-		background-size: cover;
 	}
-	h4 {
-		padding-top: 35.6%;
+	.h4 {
 		font-size: 80px;
 		line-height: 60px;
 	}
 	.aside-article .article-text {
 		font-size: 24px;
 		line-height: 28px;
-		padding-top: 14%;
-		padding-bottom: 33.7%;
-	}
-	.img-aside.first {
-		background-image: url("../images/be-active_1024.jpg");
+		margin-top: 14%;
 	}
 	.img-aside.second {
-		background-image: url("../images/find-contact_1024.jpg");
 		order: 1;
-	}
-	.img-aside.third {
-		background-image: url("../images/work-it_1024.jpg");
 	}
 	
 	.aside-article .number-container {
@@ -720,6 +668,7 @@ footer .buttons {
 	}
 	.footer .content-container {
 		padding-top: 228px;
+		padding-bottom: 52px;
 	}
 	.footer-title-container {
 		display: flex;
@@ -732,12 +681,12 @@ footer .buttons {
 		height: 136px;
 		padding-top: 24px;
 		border-radius: 30px;
-		margin: 0 28px;
+		margin: 0 28px 0 0;
 	}
 	.logo {
 		width: 100px;
 	}
-	h5 {
+	.h5 {
 		font-size: 80px;
 		letter-spacing: 4px;
 		line-height: 60px;
@@ -745,7 +694,7 @@ footer .buttons {
 	.footer-title {
 		text-align: left;
 		text-align-last: left;
-		padding-top: 15px;
+		margin-top: 15px;
 	}
 	.footer-title.text {
 		font-size: 30px;
@@ -753,233 +702,7 @@ footer .buttons {
 		color: #a496ca;
 	}
 	.footer .buttons {
-		padding: 70px 0;
-		margin: 80px 0 138px;
-	}
-	.footer .logo-text {
-		padding: 52px 0;
-	}
-}
-
-
-@media (min-width: 1920px) {
-	.main-header {
-		background-image: url("../images/football_1920.jpg");
-	}
-	.container {
-		width: 100%
-	}
-	.content-container {
-		width: 100%;
-		max-width: 1560px;
-		padding-left: 1%;
-		padding-right: 1%;
-	}
-	.logo-text {
-		width: 194px;
-		padding: 44px 0;
-	}
-	h1 {
-		margin-top: 246px;
-		padding-left: 0;
-		font-size: 90px;
-		letter-spacing: 5px;
-		line-height: 100px;
-	}
-	.welcome {
-		margin-top: 0;
-	}
-	.welcome.text {
-		margin-left: auto;
-	}
-	.buttons {
-		padding: 220px 0 110px;
-	}
-	.buttons .list {
-		display: flex;
-		justify-content: center;
-	}
-	.button-container {
-		height: 78px;
-		width: 316px;
-	 	padding: 15px 40px;
-	 	margin: 0 25px;
-	}
-	.icon {
-		width: 47px;
-		height: 47px;
-	}
-	.icon.google {
-		margin-left: 15px; 
-	}
-	.app-button {
-		margin-left: 25px;
-	}
-	.button-text {
-		font-size: 14px;
-		line-height: 17px;
-		letter-spacing: 1px;
-		font-weight: 400;
-	}
-	span.button-text+.button-text {
-		font-weight: 700;
-	}
-
-
-	.athlets-section, .players-section {
-		min-height: 0;
-	}
-	h2 {
-		padding: 115px 0 53px;
-		font-size: 80px;
-		margin-bottom: 0;
-	}
-	.img-container.athlets {
-		min-height: 910px;
-		background-position: left top;
-		top: 28px;
-		left: 13.6%;
-		right: 50%;
-	}
-	.img-container.players {
-		height: 815px;
-		background-position: right top;
-		top: 22px;
-		right: 6.4%;
-		left: 42%;
-	}
-	.img-container.athlets {
-		background-image: url("../images/footballer_566.png");
-	}
-	.img-container.players {
-		background-image: url("../images/basketballer_991.png");
-	}
-	.athlets-section .content-container {
-		width: 42%;
-		margin-right: 8%;
-	}
-	.players-section .content-container {
-		width: 42%;
-		margin-left: 8%;
-	}
-	article:nth-of-type(3n+1) {
-		background-color: #ffffff;
-	}
-	h3 {
-		font-size: 36px;
-		letter-spacing: 2px;
-	}
-	.article-text {
-		font-size: 20px;
-		line-height: 28px;
-		padding-top: 28px;
-		padding-bottom: 54px
-	}
-	.number-container {
-		width: 22px;
-	}
-	.article-number {
-		font-size: 18px;
-		line-height: 24px;
-	}
-	.article-number::after {
-  		width: 19px;
-  		height: 5px;
-  		border-radius: 2px;
-	}
-
-	.aside-article {
-		padding-bottom: 0;
-		display: flex;
-	}
-	.aside-article .content-container {
-		width: 35%;
-		margin-left: 7.3%;
-	}
-	.img-aside {
-		margin-bottom: 0;
-		width: 50%;
-		min-height: 730px;
-		background-size: cover;
-	}
-	h4 {
-		padding-top: 35.6%;
-		font-size: 80px;
-		line-height: 60px;
-	}
-	.aside-article .article-text {
-		font-size: 24px;
-		line-height: 28px;
-		padding-top: 14%;
-		padding-bottom: 33.7%;
-	}
-	.img-aside.first {
-		background-image: url("../images/be-active_1024.jpg");
-	}
-	.img-aside.second {
-		background-image: url("../images/find-contact_1024.jpg");
-		order: 1;
-	}
-	.img-aside.third {
-		background-image: url("../images/work-it_1024.jpg");
-	}
-	
-	.aside-article .number-container {
-		width: 168px;
-		height: 154px;
-		padding-top: 60px;
-		top: 28.8%;
-		left: calc(50% - 84px);
-	}
-	.aside-article .article-number {
-		font-size: 24px;
-		letter-spacing: 1px;
-		line-height: 34px;
-	}
-	.aside-article .article-number::after {
-  		width: 24px;
-  		background-color: 8f7bc8;
-	}
-	.footer {
-		background-image: url("../images/game_1280.jpg");
-	}
-	.footer .content-container {
-		padding-top: 228px;
-	}
-	.footer-title-container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: auto;
-	}
-	.logo-container {
-		width: 130px;
-		height: 136px;
-		padding-top: 24px;
-		border-radius: 30px;
-		margin: 0 28px;
-	}
-	.logo {
-		width: 100px;
-	}
-	h5 {
-		font-size: 80px;
-		letter-spacing: 4px;
-		line-height: 60px;
-	}
-	.footer-title {
-		text-align: left;
-		text-align-last: left;
-		padding-top: 15px;
-	}
-	.footer-title.text {
-		font-size: 30px;
-		line-height: 34px;
-		color: #a496ca;
-	}
-	.footer .buttons {
-		padding: 70px 0;
-		margin: 80px 0 138px;
+		margin: 150px auto 260px;
 	}
 	.footer .logo-text {
 		padding: 52px 0;
